@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body
+	{
+       transform-style:preserve-3d;
+	   perspective:1500px;
+	   background: black;
+
+	}
+     .wrap
+     {  
+     	transform-style:preserve-3d;
+     	width: 200px;height: 605px;border:1px solid black;
+     	margin: 150px auto;
+     	position:relative;
+     	animation:move11 5s linear 4s infinite  forwards; 
+
+     	/*transform:scale(1);*/
+     	transform:rotateX(-30deg);
+      
+     	
+     }
+     .wrap div
+     {
+     	width: 200px;height: 300px;border:3px solid white;border-left:none;border-right:none;
+     	position: absolute;
+     	left: 0;
+     	top: 0;
+     	opacity: 1;
+     	-webkit-box-reflect:below 20px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0.2));
+     }
+     .wrap div img
+     {
+     	 transition:0.5s;
+     }
+     .wrap:hover
+     {
+     	-webkit-animation-play-state:paused;
+     }
+     .wrap div:hover img
+     {
+     	transform:scaleX(1.2) scaleY(1.2);
+     	
+     }
+     .div1
+     {
+     	animation:move7 0.5s linear  forwards;
+     }
+     .div2
+     {
+     	animation:move5 0.5s linear 0.5s forwards;
+     }
+     .div3
+     {
+     	animation:move3 0.5s linear 1s forwards;
+     }
+     .div4
+     {
+     	animation:move1 0.5s linear 1.5s forwards;
+     }
+     .div5
+     {
+     	animation:move8 0.5s linear 2s forwards;
+     }
+     .div6
+     {
+     	animation:move6 0.5s linear 2.5s forwards;
+     }
+     .div7
+     {
+     	animation:move4 0.5s linear 3s forwards;
+     }
+     .div8
+     {
+     	animation:move2 0.5s linear 3.5s forwards;
+     }
+     
+     /*.wrap
+     { 
+     	animation:move10 3s linear 11s forwards;
+     }*/
+     /*.wrap
+     { 
+     	animation:move11 3s linear 14s forwards;
+     }*/
+     @keyframes move1
+     {
+     	from{transform:translateZ(0px);}
+     	to{transform:translateZ(-300px);}
+     }
+     @keyframes move2
+     {
+     	from{transform:translateZ(0px);}
+     	to{transform:translateZ(300px);}
+     }
+     @keyframes move3
+     {
+     	from{transform: rotateY(0deg) translateZ(0px);}
+     	to{transform: rotateY(45deg) translateZ(-300px);}
+     }
+     @keyframes move4
+     {
+     	from{transform: rotateY(0deg) translateZ(0px);}
+     	to{transform: rotateY(45deg) translateZ(300px);}
+     }
+     @keyframes move5
+     {
+     	from{transform: rotateY(0deg) translateZ(0px);}
+     	to{transform: rotateY(90deg) translateZ(-300px);}
+     }
+     @keyframes move6
+     {
+     	from{transform: rotateY(0deg) translateZ(0px);}
+     	to{transform: rotateY(90deg) translateZ(300px);}
+     }
+     @keyframes move7
+     {
+     	from{ transform: rotateY(0deg) translateZ(0px);}
+     	to{ transform: rotateY(135deg) translateZ(-300px);}
+     }
+     @keyframes move8
+     {
+     	from{ transform: rotateY(0deg) translateZ(0px);}
+     	to{ transform: rotateY(135deg) translateZ(300px);}
+     }
+     /*@keyframes move9
+     {
+     	from{ transform:rotateX(-20deg); }
+     	to{ transform:rotateX(-40deg) ;}
+     }*/
+    /* @keyframes move10
+     {
+     	from{ transform:rotateX(-40deg); }
+     	to{ transform:rotateX(0deg) ;}
+     }*/
+     @keyframes move11
+     {
+     	from{transform:rotateX(-30deg) rotateY(0deg); }
+     	25%{transform:rotateX(0deg) rotateY(90deg);}
+     	50%{transform:rotateX(10deg) rotateY(180deg);}
+     	75%{transform:rotateX(0deg) rotateY(270deg);}
+     	to{ transform:rotateX(-30deg) rotateY(360deg);}
+     }
+  
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="div1"><img src="images/01.jpg"></div>
+		<div class="div2"><img src="images/02.jpg"></div>
+		<div class="div3"><img src="images/03.jpg"></div>
+		<div class="div4"><img src="images/01.jpg"></div>
+		<div class="div5"><img src="images/02.jpg"></div>
+		<div class="div6"><img src="images/03.jpg"></div>
+		<div class="div7"><img src="images/01.jpg"></div>
+		<div class="div8"><img src="images/02.jpg"></div>
+	</div>
+</body>
+</html>
